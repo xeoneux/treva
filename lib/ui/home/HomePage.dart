@@ -23,7 +23,17 @@ class _GradientAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: barHeight,
-      child: Center(child: Text(title)),
+      child: Center(
+        child: Text(
+          title,
+          style: TextStyle(
+            fontSize: 36.0,
+            color: Colors.white,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
       decoration: BoxDecoration(color: Colors.blue),
     );
   }

@@ -21,8 +21,9 @@ class _GradientAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double statusBarHeight = MediaQuery.of(context).padding.top;
+
     return Container(
-      height: barHeight,
       child: Center(
         child: Text(
           title,
@@ -34,6 +35,7 @@ class _GradientAppBar extends StatelessWidget {
           ),
         ),
       ),
+      height: barHeight + statusBarHeight,
       decoration: BoxDecoration(color: Colors.blue),
     );
   }

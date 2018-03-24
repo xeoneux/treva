@@ -6,7 +6,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          _GradientAppBar('Planets'),
+          _GradientAppBar('treva'),
         ],
       ),
     );
@@ -35,8 +35,20 @@ class _GradientAppBar extends StatelessWidget {
           ),
         ),
       ),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Color(0xFF3366FF),
+            Color(0xFF00CCFF),
+          ],
+          stops: [0.0, 1.0],
+          tileMode: TileMode.clamp,
+          end: FractionalOffset(1.0, 0.0),
+          begin: FractionalOffset(0.0, 0.0),
+        ),
+      ),
       height: barHeight + statusBarHeight,
-      decoration: BoxDecoration(color: Colors.blue),
+      padding: EdgeInsets.only(top: statusBarHeight),
     );
   }
 }

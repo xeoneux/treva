@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:planets/ui/home/HomePage.dart';
+import 'package:treva/ui/home/HomePage.dart';
 
 void main() {
   runApp(
     MaterialApp(
-      title: 'Planets',
+      title: 'treva',
       home: HomePage(),
     ),
   );

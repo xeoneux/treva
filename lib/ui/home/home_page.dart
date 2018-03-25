@@ -1,5 +1,23 @@
 import 'package:flutter/material.dart';
 
+import 'package:treva/ui/home/home_page_body.dart';
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: <Widget>[
+          GradientAppBar('treva'),
+          HomePageBody(),
+          HomePageBody(),
+          HomePageBody(),
+        ],
+      ),
+    );
+  }
+}
+
 class GradientAppBar extends StatelessWidget {
   final String title;
   final double barHeight = 66.0;

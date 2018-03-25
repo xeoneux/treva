@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'package:treva/model/planet.dart';
+
 class PlanetRow extends StatelessWidget {
+  final Planet planet;
+  PlanetRow(this.planet);
+
   @override
   Widget build(BuildContext context) {
     final planetCard = Container(
@@ -24,7 +29,7 @@ class PlanetRow extends StatelessWidget {
       child: Image(
         width: 92.0,
         height: 92.0,
-        image: AssetImage('images/mars.png'),
+        image: AssetImage(planet.image),
       ),
       alignment: FractionalOffset.centerLeft,
       margin: EdgeInsets.symmetric(vertical: 16.0),
